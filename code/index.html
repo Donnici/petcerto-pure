@@ -13,6 +13,7 @@
 						colors: {
 							primary: '#027373',
 							'primary-dark': '#237b72',
+							secondary: '#E69D04',
 							accent: '#E69D04',
 							petcerto: '#40E0D0'
 						}
@@ -20,8 +21,53 @@
 				}
 			};
 		</script>
+		<!-- Product Carousel -->
+		<style>
+			.carousel-container {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+				scroll-snap-type: x mandatory;
+			}
+			.carousel-container::-webkit-scrollbar {
+				display: none;
+			}
+			.carousel-page {
+				scroll-snap-align: start;
+			}
+			.dot {
+				transition: all 0.3s ease;
+			}
+			.dot.active {
+				background-color: #fff;
+				width: 2rem;
+			}
+		</style>
+		<!-- Category Carousel -->
+		<style>
+			.carousel-container {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+			.carousel-container::-webkit-scrollbar {
+				display: none;
+			}
+
+			.category-button {
+				transition: all 0.2s ease;
+			}
+
+			.category-button:hover {
+				background-color: #f3f4f6;
+			}
+
+			.category-button.active {
+				background-color: #027373;
+				color: white;
+				border-color: #027373;
+			}
+		</style>
 	</head>
-	<body>
+	<body class="bg-gray-100">
 		<header class="bg-primary text-white">
 			<div class="container mx-auto px-4">
 				<nav class="flex items-center justify-between h-16">
@@ -136,6 +182,724 @@
 			</div>
 		</header>
 
+		<!-- Category Carousel -->
+		<section>
+			<div class="relative max-w-full">
+				<!-- Carousel Container -->
+				<div
+					class="carousel-container overflow-x-auto flex gap-3 px-4 py-2 scroll-smooth"
+				>
+					<button
+						class="category-button flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 whitespace-nowrap"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						Cachorros
+					</button>
+
+					<button
+						class="category-button flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 whitespace-nowrap"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						Gatos
+					</button>
+
+					<button
+						class="category-button flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 whitespace-nowrap"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						Pássaros
+					</button>
+
+					<button
+						class="category-button flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 whitespace-nowrap"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						Peixes
+					</button>
+
+					<button
+						class="category-button flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 whitespace-nowrap"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						Outros Animais
+					</button>
+
+					<button
+						class="category-button flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 whitespace-nowrap"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						Casa e Jardim
+					</button>
+
+					<button
+						class="category-button flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 whitespace-nowrap"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						Piscina e Higiene
+					</button>
+
+					<button
+						class="category-button flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 whitespace-nowrap"
+					>
+						<svg
+							class="w-5 h-5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						Outros
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Products Carousel -->
+		<section class="bg-secondary p-8 rounded-3xl">
+			<div class="container mx-auto">
+				<h2
+					class="text-white text-2xl md:text-4xl font-bold text-center mb-8"
+				>
+					Principais ofertas da PetCerto
+				</h2>
+
+				<div class="relative">
+					<div class="carousel-container overflow-x-hidden">
+						<div
+							class="flex transition-transform duration-300 ease-in-out"
+						>
+							<!-- Page 1 -->
+							<div
+								class="carousel-page flex-none w-full flex gap-4"
+							>
+								<!-- 5 Product Cards -->
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Page 2 -->
+							<div
+								class="carousel-page flex-none w-full flex gap-4"
+							>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Page 3 -->
+							<div
+								class="carousel-page flex-none w-full flex gap-4"
+							>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+								<div class="w-1/5">
+									<div
+										class="bg-white rounded-lg p-4 flex flex-col h-full"
+									>
+										<img
+											src="../assets/product.png"
+											alt="Antipulgas Zoetis Simparic 80mg"
+											class="w-full h-48 object-contain mb-4"
+										/>
+										<div class="flex items-center mb-2">
+											<div class="flex text-yellow-400">
+												★★★★★
+											</div>
+											<span
+												class="text-gray-500 text-sm ml-1"
+												>4.7</span
+											>
+										</div>
+										<h3 class="font-semibold mb-2">
+											Antipulgas Zoetis Simparic 80mg
+										</h3>
+										<div class="text-gray-600 mb-2">
+											Ofertas de:
+										</div>
+										<div class="font-bold mb-4">
+											R$ 78,90 á R$ 99,90
+										</div>
+										<button
+											class="mt-auto w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors"
+										>
+											Comparar
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Navigation Dots -->
+					<div
+						id="dots-container"
+						class="flex justify-center gap-2 mt-4"
+					>
+						<!-- Dots will be generated by JavaScript based on product count -->
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- About -->
 		<section class="w-full bg-gray-100">
 			<div class="container mx-auto px-4 py-16 max-w-4xl">
@@ -174,7 +938,7 @@
 		</section>
 
 		<!-- News Form -->
-		<section class="flex items-center justify-center bg-gray-100 py-8">
+		<section class="flex items-center justify-center py-8">
 			<div class="bg-primary p-8 rounded-3xl w-full max-w-4xl mx-4">
 				<h2
 					class="text-center text-2xl md:text-3xl font-bold text-white mb-8"
@@ -495,7 +1259,160 @@
 				}
 			}
 		</script>
+		<!-- JavaScript for category carousel -->
+		<script>
+			const container = document.querySelector('.carousel-container');
+			const scrollLeftBtn = document.getElementById('scrollLeft');
+			const scrollRightBtn = document.getElementById('scrollRight');
+			const scrollAmount = 200;
 
+			// Scroll buttons functionality
+			scrollLeftBtn.addEventListener('click', () => {
+				container.scrollBy({
+					left: -scrollAmount,
+					behavior: 'smooth'
+				});
+			});
+
+			scrollRightBtn.addEventListener('click', () => {
+				container.scrollBy({
+					left: scrollAmount,
+					behavior: 'smooth'
+				});
+			});
+
+			// Category button click handler
+			const categoryButtons =
+				document.querySelectorAll('.category-button');
+			categoryButtons.forEach((button) => {
+				button.addEventListener('click', () => {
+					// Remove active class from all buttons
+					categoryButtons.forEach((btn) =>
+						btn.classList.remove('active')
+					);
+					// Add active class to clicked button
+					button.classList.add('active');
+				});
+			});
+
+			// Show/hide scroll buttons based on scroll position
+			function updateScrollButtons() {
+				const isAtStart = container.scrollLeft === 0;
+				const isAtEnd =
+					container.scrollLeft + container.clientWidth >=
+					container.scrollWidth - 1;
+
+				scrollLeftBtn.style.opacity = isAtStart ? '0' : '1';
+				scrollRightBtn.style.opacity = isAtEnd ? '0' : '1';
+			}
+
+			container.addEventListener('scroll', updateScrollButtons);
+			window.addEventListener('resize', updateScrollButtons);
+			updateScrollButtons(); // Initial check
+		</script>
+
+		<!-- JavaScript for product carousel -->
+		<script>
+			// Configuration
+			const productsPerPage = 5;
+			const totalProducts = 15; // Update this based on your actual product count
+			const totalPages = Math.ceil(totalProducts / productsPerPage);
+
+			// Elements
+			const carousel = document.querySelector(
+				'.carousel-container > div'
+			);
+			const dotsContainer = document.getElementById('dots-container');
+			let currentPage = 0;
+
+			// Generate dots based on number of pages
+			function generateDots() {
+				for (let i = 0; i < totalPages; i++) {
+					const dot = document.createElement('button');
+					dot.className = `dot h-2 ${
+						i === 0 ? 'w-8' : 'w-2'
+					} rounded-full bg-white/30`;
+					dot.setAttribute('data-page', i);
+					dot.addEventListener('click', () => goToPage(i));
+					dotsContainer.appendChild(dot);
+				}
+			}
+
+			// Go to specific page
+			function goToPage(pageIndex) {
+				currentPage = pageIndex;
+				const offset = pageIndex * -100;
+				carousel.style.transform = `translateX(${offset}%)`;
+				updateDots();
+			}
+
+			// Update dots active state
+			function updateDots() {
+				const dots = dotsContainer.querySelectorAll('.dot');
+				dots.forEach((dot, index) => {
+					if (index === currentPage) {
+						dot.classList.add('active');
+						dot.style.width = '2rem';
+					} else {
+						dot.classList.remove('active');
+						dot.style.width = '0.5rem';
+					}
+				});
+			}
+
+			// Initialize dots
+			generateDots();
+
+			// Touch/Swipe handling
+			let startX;
+			let isDragging = false;
+			let currentTranslate = 0;
+			let prevTranslate = 0;
+
+			carousel.addEventListener('touchstart', touchStart);
+			carousel.addEventListener('touchmove', touchMove);
+			carousel.addEventListener('touchend', touchEnd);
+
+			function touchStart(e) {
+				startX = getPositionX(e);
+				isDragging = true;
+				currentTranslate = prevTranslate;
+			}
+
+			function touchMove(e) {
+				if (!isDragging) return;
+
+				const currentPosition = getPositionX(e);
+				const diff = currentPosition - startX;
+				const walk = (diff / carousel.offsetWidth) * 100;
+
+				currentTranslate = prevTranslate + walk;
+				carousel.style.transform = `translateX(${currentTranslate}%)`;
+			}
+
+			function touchEnd() {
+				isDragging = false;
+				const movedBy = currentTranslate - prevTranslate;
+
+				if (Math.abs(movedBy) > 20) {
+					if (movedBy > 0 && currentPage > 0) {
+						currentPage--;
+					} else if (movedBy < 0 && currentPage < totalPages - 1) {
+						currentPage++;
+					}
+				}
+
+				goToPage(currentPage);
+				prevTranslate = currentPage * -100;
+			}
+
+			function getPositionX(e) {
+				return e.type.includes('mouse')
+					? e.pageX
+					: e.touches[0].clientX;
+			}
+
+		</script>
 		<!-- JavaScript for newsletter -->
 		<script>
 			const form = document.getElementById('newsletterForm');
