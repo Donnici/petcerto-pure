@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#027373',
+                        'primary-dark': '#237b72',
+                        'accent': '#E69D04'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .form-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(2, 115, 115, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="bg-primary p-8 rounded-3xl w-full max-w-xl mx-4">
+        <h2 class="text-center text-2xl md:text-3xl font-bold text-white mb-8">
+            Receba as <span class="text-accent">melhores ofertas</span><br/>
+            no seu e-mail
+        </h2>
+        
+        <form id="newsletterForm" class="space-y-4" novalidate>
+            <div>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Nome" 
+                    required
+                    class="w-full px-4 py-3 rounded-xl form-input text-gray-700"
+                />
+                <span id="nameError" class="text-red-300 text-sm hidden">Por favor, insira seu nome</span>
+            </div>
+            
+            <div>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="seu_email@email.com.br" 
+                    required
+                    class="w-full px-4 py-3 rounded-xl form-input text-gray-700"
+                />
+                <span id="emailError" class="text-red-300 text-sm hidden">Por favor, insira um email válido</span>
+            </div>
+            
+            <button 
+                type="submit"
+                class="w-full bg-accent hover:bg-amber-500 text-white font-bold py-3 px-4 rounded-xl transition-colors"
+            >
+                Quero economizar
+            </button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="hidden mt-4 text-center text-white bg-green-500 p-4 rounded-xl">
+            Obrigado por se inscrever!
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('newsletterForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const successMessage = document.getElementById('successMessage');
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function showError(element, errorElement) {
+            element.classList.add('border-2', 'border-red-300');
+            errorElement.classList.remove('hidden');
+        }
+
+        function hideError(element, errorElement) {
+            element.classList.remove('border-2', 'border-red-300');
+            errorElement.classList.add('hidden');
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            // Validate name
+            if (!nameInput.value.trim()) {
+                showError(nameInput, nameError);
+                isValid = false;
+            } else {
+                hideError(nameInput, nameError);
+            }
+
+            // Validate email
+            if (!emailInput.value.trim() || !validateEmail(emailInput.value)) {
+                showError(emailInput, emailError);
+                isValid = false;
+            } else {
+                hideError(emailInput, emailError);
+            }
+
+            // If form is valid, submit
+            if (isValid) {
+                // Here you would typically send the data to your server
+                console.log('Form submitted:', {
+                    name: nameInput.value,
+                    email: emailInput.value
+                });
+
+                // Show success message
+                form.reset();
+                successMessage.classList.remove('hidden');
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 3000);
+            }
+        });
+
+        // Clear errors on input
+        nameInput.addEventListener('input', () => hideError(nameInput, nameError));
+        emailInput.addEventListener('input', () => hideError(emailInput, emailError));
+    </script>
+</body>
+</html>

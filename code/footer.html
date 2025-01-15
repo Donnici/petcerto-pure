@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCerto Footer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#027373',
+                        'primary-dark': '#237b72'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <footer class="bg-primary text-white">
+        <!-- Help Section -->
+        <div class="container mx-auto px-4 py-8">
+            <h2 class="text-center text-3xl mb-8">
+                Precisa de <span class="text-amber-500">ajuda?</span>
+            </h2>
+            
+            <!-- Help Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-16">
+                <!-- Card 1 -->
+                <a href="#" class="bg-white rounded-lg p-4 flex flex-col items-center justify-center text-gray-600 hover:shadow-lg transition-shadow">
+                    <img src="/placeholder.svg?height=24&width=24" alt="" class="w-6 h-6 mb-2 text-amber-500" />
+                    <span class="text-sm">Fale Conosco</span>
+                </a>
+                
+                <!-- Card 2 -->
+                <a href="#" class="bg-white rounded-lg p-4 flex flex-col items-center justify-center text-gray-600 hover:shadow-lg transition-shadow">
+                    <img src="/placeholder.svg?height=24&width=24" alt="" class="w-6 h-6 mb-2 text-amber-500" />
+                    <span class="text-sm">Perguntas Frequentes</span>
+                </a>
+                
+                <!-- Card 3 -->
+                <a href="#" class="bg-white rounded-lg p-4 flex flex-col items-center justify-center text-gray-600 hover:shadow-lg transition-shadow">
+                    <img src="/placeholder.svg?height=24&width=24" alt="" class="w-6 h-6 mb-2 text-amber-500" />
+                    <span class="text-sm">Política de Privacidade</span>
+                </a>
+                
+                <!-- Card 4 -->
+                <a href="#" class="bg-white rounded-lg p-4 flex flex-col items-center justify-center text-gray-600 hover:shadow-lg transition-shadow">
+                    <img src="/placeholder.svg?height=24&width=24" alt="" class="w-6 h-6 mb-2 text-amber-500" />
+                    <span class="text-sm">Proteção de Dados</span>
+                </a>
+                
+                <!-- Card 5 -->
+                <a href="#" class="bg-white rounded-lg p-4 flex flex-col items-center justify-center text-gray-600 hover:shadow-lg transition-shadow">
+                    <img src="/placeholder.svg?height=24&width=24" alt="" class="w-6 h-6 mb-2 text-amber-500" />
+                    <span class="text-sm">Termos de uso</span>
+                </a>
+                
+                <!-- Card 6 -->
+                <a href="#" class="bg-white rounded-lg p-4 flex flex-col items-center justify-center text-gray-600 hover:shadow-lg transition-shadow">
+                    <img src="/placeholder.svg?height=24&width=24" alt="" class="w-6 h-6 mb-2 text-amber-500" />
+                    <span class="text-sm">Preferencia de Cookies</span>
+                </a>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-primary-dark">
+
+                <!-- Nossas Políticas -->
+                <div>
+                    <h3 class="font-bold mb-4">Nossas Políticas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Política de privacidade</a></li>
+                        <li><a href="#" class="hover:underline">Termos de uso</a></li>
+                        <li><a href="#" class="hover:underline">Política de Proteção de dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sobre a PetCerto -->
+                <div>
+                    <h3 class="font-bold mb-4">Sobre a PetCerto</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Quem somos</a></li>
+                        <li><a href="#" class="hover:underline">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Precisa de ajuda? -->
+                <div>
+                    <h3 class="font-bold mb-4">Precisa de ajuda?</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Fale Conosco</a></li>
+                        <li><a href="#" class="hover:underline">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Company Info -->
+            <div class="pt-8 text-center">
+                <h4 class="font-bold mb-2">PetCerto Ltda.</h4>
+                <p class="text-sm mb-1">CNPJ 00.000.000/0001-00</p>
+                <p class="text-sm mb-4">Av. Paulista, nº 01 - São Paulo - SP</p>
+                <p class="text-sm">&copy; PetCerto - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
